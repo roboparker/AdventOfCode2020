@@ -36,11 +36,10 @@ def getPasswordValidityCounts():
     input.close()
     return valid, invalid
 
+def challenge_2_1():
+    valid, invalid = getOldPasswordValidityCounts()
+    print(valid, " valid password(s) and", invalid, "invalid password(s)")
 
-print("Day 2, Challenge 1")
-valid, invalid = getOldPasswordValidityCounts()
-print(valid, " valid password(s) and", invalid, "invalid password(s)")
-
-print("Day 2, Challenge 2")
-valid, invalid = getPasswordValidityCounts()
-print(valid, " valid password(s) and", invalid, "invalid password(s)")
+def challenge_2_2():
+    valid, invalid = getPasswordValidityCounts()
+    print(valid, " valid password(s) and", invalid, "invalid password(s)")

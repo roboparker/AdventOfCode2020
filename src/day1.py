@@ -35,20 +35,24 @@ def getSubsetSum3(set, n, sum):
                 r -= 1
     return False, 0, 0, 0
 
-sum = 2020
-set = getSet()
-length = len(set)
+def challenge_1_1():
+    sum = 2020
+    set = getSet()
+    length = len(set)
+    result, a, b = getSubsetSum2(set, length, sum)
+    if result:
+        print("Subset found", a, b)
+        print("Product", a * b)
+    else:
+        print("Subset not found")
 
-print("Day 1, Challenge 1")
-result, a, b = getSubsetSum2(set, length, sum)
-if result:
-    print("subset found", a, b, a*b)
-else:
-    print("subset not found")
-
-print("Day 1, Challenge 2")
-result, a, b, c = getSubsetSum3(set, length, sum)
-if result:
-    print("subset found", a, b, c, a*b*c)
-else:
-    print("subset not found")
+def challenge_1_2():
+    sum = 2020
+    set = getSet()
+    length = len(set)
+    result, a, b, c = getSubsetSum3(set, length, sum)
+    if result:
+        print("Subset found", a, b, c)
+        print("Product", a * b * c)
+    else:
+        print("Subset not found")
